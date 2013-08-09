@@ -16,4 +16,6 @@ To build and run this project:
     
     > ./sbt
 
-In sbt shell: (> test or > run)
+In sbt shell: 
+    
+    > run
