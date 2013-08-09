@@ -30,7 +30,7 @@ trait MachineInstance {
 
       private val neighbors =                                                           // -- func list for neighbors generation
         for(dx <- offset; dy <- offset if (dx, dy) != (0, 0))                           // -- for 8 posible neighbors
-        yield ((x: Int, y: Int) => (x + dx, y + dy)).tupled                             // -- generate 8 funcs (dx, dx) => (x + dx, y + dy)
+        yield ((x: Int, y: Int) => (x + dx, y + dy)).tupled                             // -- generate 8 funcs
 
       private val step: Cells => Cells =
         cells =>
@@ -43,7 +43,7 @@ trait MachineInstance {
             case (_, 3)     => true                                                     // -- rules 2 & 4
             case _          => false                                                    // -- rules 1 & 3
           }
-          .toList                                                                       // -- convert Map to List
+          .to[List]                                                                     // -- convert Map to List
           .map { case(cell, _) => cell }                                                // -- keep only cells
   }}
 }
