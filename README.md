@@ -10,9 +10,9 @@ ________________________
 
 To build and run this project:
 
-    > git clone https://github.com/immediatus/issue-management-service
+    > git clone https://github.com/immediatus/conways-game-of-life-scala
     
-    > cd issue-management-servise
+    > cd conways-game-of-life-scala
     
     > ./sbt
 
